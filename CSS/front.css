@@ -1,0 +1,104 @@
+.front{
+    background-color: #F2EFEC;
+    padding-top: 30px;
+}
+.front .row-1{
+      margin-bottom: 15px;
+      height: 55vh;
+      overflow: hidden;
+    display: flex;
+}
+.front .row-1 .col-1 a{
+    text-decoration: none;
+    color: rgb(83, 83, 83);
+}
+.front .row-1 .col-1 a #title{
+    overflow: hidden;
+    width:30rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    font-family: 'Zilla Slab', sans-serif;
+    font-weight: 500;
+    margin: 0;
+    font-size: 3rem;
+    /* display: block; */
+}
+.front .row-1 .col-1 a #title:hover{
+    color: #B80000;
+    text-decoration: underline;
+}
+.front .row-1 .col-1 a #discription{
+    overflow: hidden;
+    width:25rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+.front .row-1 .col-1 .location{
+    padding: 0;
+    list-style: none;
+}
+.front .row-1 .col-1 .location li{
+    display: flex;
+    align-items: center;
+    padding-left: 5px;
+}
+.front .row-1 .col-1 .location li a{
+
+    border-left: 1px solid #a7a7a7be;
+    text-decoration: none;
+    color: grey;
+}
+.front .row-1 .col-2 a img{
+    width: 46rem;
+}
+.front .row-1 .col-1 .topics{
+    padding: 0 20px;
+}
+.front .row-1 .col-1 .topics li a{
+    text-decoration: none;
+    color: black;
+    line-height: 25px;
+}
+.front .row-2{
+    border-top: 1px solid #a7a7a7be ;
+    padding: 15px 0;
+    /* margin-bottom: 20rem; */
+    justify-content: space-between;
+    /* height: 100%; */
+    display: flex;
+    /* max-width: 91.5%; */
+    /* margin: auto; */
+    align-items: center;
+}
+.front .row-2 .col{
+    width: 19%;
+    /* height: 100%; */
+    /* max-width: 100%; */
+    /* margin-right: 20px; */
+}
+.front .row-2 .col a{
+    font-family: 'Zilla Slab', sans-serif;
+    line-height: 1.25rem;
+    font-weight: 700;
+    color: grey;
+    text-decoration: none;
+    display: block;
+}
+.front .row-2 .col a span{
+    overflow: hidden;
+    width:13rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+.front .row-2 .col .img-wrapper{
+    display: block;
+    height: 130px;
+    overflow: hidden;
+}
+.front .row-2 a img{
+    /* padding-right: 20px; */
+    width: 100%;
+}

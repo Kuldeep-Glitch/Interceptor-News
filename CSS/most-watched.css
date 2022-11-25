@@ -1,0 +1,99 @@
+.most-watched .row-1 .col h2{
+    font-family: sans-serif;
+    /* margin: 100px auto; */
+    /* color: #228B22; */
+    text-align: center;
+    font-size: 30px;
+    /* max-width: 600px; */
+    position: relative;
+  
+}
+.most-watched .row-1 .col h2::before{
+    content: "";
+    display: block;
+    width: 40%;
+    height: 2px;
+    background: #000;
+    left: 0;
+    top: 50%;
+    position: absolute;
+}
+.most-watched .row-1 .col h2::after{
+    content: "";
+    display: block;
+    width: 40%;
+    height: 2px;
+    background: #000;
+    right: 0;
+    top: 50%;
+    position: absolute;
+}
+.most-watched .row-2{
+    box-sizing: border-box;
+    display: flex;
+}
+.most-watched .row-2 .col{
+    padding-right: 10px;
+    /* align-items: center; */
+    display: flex;
+}
+.most-watched .row-2 .col .no{
+    font-size: 35px;
+    font-family: oswald;
+    color: #B92318;
+    font-weight: 600;
+    margin: -5px 15px 0 0;
+}
+.most-watched .row-2 .col a{
+    font-weight: 700;
+    font-family: 'Zilla Slab', sans-serif;
+    text-decoration: none;
+    font-size: 18px;
+    color: rgb(120, 119, 119);
+    display: block;
+    line-height: 20px;
+}
+.most-watched .row-2 .col a .fa{
+    padding-right: 10px;
+    font-size: 15px;
+    color: black;
+}
+.most-watched .row-2 .col a:hover{
+    color: #B92318;
+    text-decoration: underline;
+}
+.most-watched .row-3{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.most-watched .row-3 .col h2{
+    padding: 0 65rem 0 0px;
+    font-family: sans-serif;
+    /* margin: 100px auto; */
+    /* color: #228B22; */
+    /* text-align: center; */
+    font-size: 30px;
+    /* max-width: 600px; */
+    position: relative;
+}
+.most-watched .row-3 .col h2::after{
+    content: "";
+    display: block;
+    width: 87%;
+    height: 2px;
+    background: #000;
+    right: 0;
+    top: 50%;
+    position: absolute;
+}
+.most-watched .row-3 .col a{
+    text-decoration: none;
+    color: black;
+    font-family: sans-serif;
+    font-weight: 700;
+}
+.most-watched .row-3 .col a:hover{
+    text-decoration: underline;
+    color: #B92318;
+}

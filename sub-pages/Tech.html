@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INterceptor-Tech</title>
+    <meta charset="utf-8" />
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300&display=swap" rel="stylesheet">
+    <link href="http://fonts.cdnfonts.com/css/zilla-slab" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="/INterceptor NEWS 2.0/CSS/main.css" />
+    <link rel="stylesheet" href="/INterceptor NEWS 2.0/CSS/feature.css">
+    <link rel="stylesheet" href="/INterceptor NEWS 2.0/CSS/footer.css">
+    <link rel="stylesheet" href="/INterceptor NEWS 2.0/CSS/front.css">
+    <link rel="stylesheet" href="/INterceptor NEWS 2.0/CSS/header.css">
+    <link rel="stylesheet" href="/INterceptor NEWS 2.0/CSS/most-watched.css">
+    <link rel="stylesheet" href="/INterceptor NEWS 2.0/CSS/recent.css">
+    <link rel="stylesheet" href="/INterceptor NEWS 2.0/CSS/video.css">
+    <!-- favicon -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <!-- Font-Awesome -->
+    <script src="https://kit.fontawesome.com/13143c900a.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- jquery -->
+    <script>
+        jQuery(document).ready(function () {
+        jQuery("#more-dropdown1").click(function (event) {
+            event.preventDefault();
+            jQuery("#middlebar").slideToggle(350);
+        });
+        });
+
+        jQuery(document).ready(function () {
+        jQuery("#more-dropdown2").click(function (event) {
+            event.preventDefault();
+            jQuery("#dropdown-2").slideToggle(350);
+        });
+        });
+    </script>
+</head>
+<body>
+    <header>
+      <section class="topbar">
+        <div class="width-container">
+          <div class="row-1">
+            <div class="col-1">
+              <a href="" class="logo"><img src="images/logo.png" alt="homepage" /></a>
+  
+              <a href="signin.html" class="signin"><i class="fa fa-user-circle" aria-hidden="true"></i>Sign in</a>
+            </div>
+            <div class="col-2">
+              <ul>
+                <li><a href="Home.html" class="home" target="_blank">Home</a></li>
+                <li><a href="News.html" class="news" target="_blank">News</a></li>
+                <li><a href="Sport.html" class="sport" target="_blank">Sport</a></li>
+                <li><a href="" class="reel">Tech</a></li>
+                <li><a href="Worklife.html" class="worklife" target="_blank">Worklife</a></li>
+                <li><a href="Travel.html" class="travel" target="_blank">Travel</a></li>
+                <li><a href="Future.html" class="future" target="_blank">Future</a></li>
+                <li><a href="Culture.html" class="culture" target="_blank">Culture</a></li>
+                <li>
+                  <a href="" id="more-dropdown1" class="more">More
+                    <i class="fa fa-caret-down" aria-hidden="true"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-3">
+              <div class="searchBar">
+                <input type="text" placeholder="Search" class="inputhold" />
+                <a href=""><i class="fa fa-search" aria-hidden="true"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="middlebar" class="middlebar">
+        <div class="width-container">
+          <div class="row-1">
+            <div class="col-1">
+              <h2>More</h2>
+            </div>
+            <div class="col-2">
+              <ul class="d-flex">
+                <li><a href="">Music</a></li>
+                <li><a href="">Wether</a></li>
+                <li><a href="">TV</a></li>
+                <li><a href="">Sounds</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- <section id="bottombar" class="bottombar">
+        <div class="width-container">
+          <div class="row-1">
+            <div class="col-1">
+              <h1>News</h1>
+            </div>
+          </div>
+          <div class="row-2">
+            <div class="col-1">
+              <ul>
+                <li><a href="Home.html" class="home">Home</a></li>
+                <li><a href="News.html" class="news">News</a></li>
+                <li><a href="" class="sport">Sport</a></li>
+                <li><a href="" class="reel">Reel</a></li>
+                <li><a href="" class="worklife">Worklife</a></li>
+                <li><a href="" class="travel">Travel</a></li>
+                <li><a href="" class="future">Future</a></li>
+                <li><a href="" class="culture">Culture</a></li>
+                 <li><a href="" class="sport">Sport</a></li>
+                  <li><a href="" class="reel">Reel</a></li>
+                  <li><a href="" class="worklife">Worklife</a></li>
+                  <li><a href="" class="travel">Travel</a></li>
+                  <li><a href="" class="future">Future</a></li>
+                  <li><a href="" class="culture">Culture</a></li> -->
+                <!-- <li id="more">
+                  <a href="" class="more" id="more-dropdown2">More
+                    <i class="fa fa-caret-down" aria-hidden="true"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="row-3" id="dropdown-2">
+          <div class="col-1 width-container">
+            <ul>
+              <li><a href="" class="pl-0 ml-0">Reality check</a></li>
+              <li><a href="" class="bottom-two-more">Newsbeat</a></li>
+              <li><a href="" class="bottom-two-more"> long read</a></li>
+            </ul>
+          </div>
+        </div>
+        </div>
+      </section> -->
+    </header>
+    <section class="front">
+      <div class="width-container">
+        <div class="row-1">
+          <div class="col-1">
+            <a href="">
+              <h1 id="title">What It’s Like to Use BeReal, an Instagram Rival That Lets You Post Only Once a Day</h1>
+              <span id="discription">
+                BY MEGAN MCCLUSKEY  
+              </span>
+            </a>
+            <ul class="location">
+              <li>
+                <i class="fas fa-clock"></i>
+                <span class="time">9h</span>
+                <a href="">U.S.A</a>
+              </li>
+            </ul>
+            <ul class="topics">
+              <li><a href="">Inside chernobyl after Russian Occupation</a></li>
+              <li><a href="">Chernobyl workers'ordeal under Russian gaurd</a></li>
+              <li><a href="">Six weeks of devastation and difiance</a></li>
+            </ul>
+          </div>
+          <div class="col-2">
+            <a href="">
+              <img src="https://api.time.com/wp-content/uploads/2022/04/bereal-app-photo-moment.jpg?" alt="">
+            </a>
+          </div>
+        </div>
+        <div class="row-2">
+          <div class="col">
+            <a href="">
+              <div class="img-wrapper">
+                <img
+                  src="https://cdn.vox-cdn.com/thumbor/lBvXLpPnPsDINPeO-0zBXc_-Wt0=/0x179:1958x1280/280x158/filters:format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/70776706/Screen_Shot_2022_04_21_at_08.09.54.0.png"
+                  alt="">
+              </div>
+              <span>FAA will revoke YouTuber’s pilot license after plane crash video</span>
+            </a>
+          </div>
+          <div class="col">
+            <a href="">
+              <div class="img-wrapper">
+                <img src="https://cdn.vox-cdn.com/thumbor/cdIUxgZ-ybZP6717jRoYeRbYp4U=/0x0:3840x2160/280x158/filters:format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/70776625/Apple_Fitness_Plus_International_Dance_Day_hero.0.png"
+                  alt="">
+              </div>
+              <span>Apple Fitness Plus users can learn BTS choreography starting next week</span>
+            </a>
+          </div>
+          <div class="col">
+            <a href="">
+              <div class="img-wrapper">
+                <img src="https://cdn.vox-cdn.com/thumbor/lzQ__C8uPEiW_VcUyGsq-bKTTDo=/0x106:2040x1254/280x158/filters:format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/70776532/acastro_210511_1777_psRestock_0005.0.jpg"
+                  alt="">
+              </div>
+              <span>The PlayStation 5 is back at Best Buy for store pickup orders (Update: sold out)</span>
+            </a>
+          </div>
+          <div class="col">
+            <a href="">
+              <div class="img-wrapper">
+                <img src="https://cdn.vox-cdn.com/thumbor/OBeI4-wDewGV5Ckb7EmByuLdk_A=/0x0:7001x3938/280x158/filters:format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/70776474/1327685591.0.jpg"
+                  alt="">
+              </div>
+              <span>Meta COO Sheryl Sandberg accused of squashing reporting about then-boyfriend Bobby Kotick</span>
+            </a>
+          </div>
+          <div class="col">
+            <a href="">
+              <div class="img-wrapper">
+                <img src="https://cdn.vox-cdn.com/thumbor/vV7T-vXS96hP5uentw4zi7X5X0Y=/0x106:2040x1254/280x158/filters:format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/70776389/acastro_180608_1777_net_neutrality_0001.0.jpg" alt="">
+              </div>
+              <span>Apple’s newest iPad Air is $50 off in both storage configurations and all colorways</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="recent">
+      <div id="width">
+        <div class="row-1">
+          <div class="col">
+            <h1>YOU SHOULD KNOW</h1>
+          </div>
+        </div>
+        <div class="row-2">
+          <div class="col">
+            <a href="">
+              <img
+                src="https://api.time.com/wp-content/uploads/2022/04/covid-19-coronavirus-variant.jpg?quality=85&w=700&h=1050&crop=1"
+                alt="">
+            </a>
+            <div class="text">
+              <a href="">
+                <h5>covid-19</h5>
+                <h3>What To Know About The XE Variant</h3>
+                <p>Mandy Oaklander</p>
+              </a>
+            </div>
+          </div>
+          <div class="col">
+            <a href="">
+              <img
+                src="https://api.time.com/wp-content/uploads/2022/04/public-sector-vacancies-01.jpg?quality=85&w=700&h=1050&crop=1"
+                alt="">
+            </a>
+            <div class="text">
+              <a href="">
+                <h5>Business</h5>
+                <h3>No Clean Water,Unplowed Streets:What the public Sector's Hirin...</h3>
+                <p>Alana semuels</p>
+              </a>
+            </div>
+          </div>
+          <div class="col">
+            <a href="">
+              <img
+                src="https://api.time.com/wp-content/uploads/2022/04/estonia-paramilitary-defense-league-training-field.jpg?quality=85&w=700&h=1050&crop=1"
+                alt="">
+            </a>
+            <div class="text">
+              <a href="">
+                <h5>Estonia</h5>
+                <h3>Estonia is Preparing to Defend itself Against Putin</h3>
+                <p>Lisa abend</p>
+              </a>
+            </div>
+          </div>
+          <div class="col">
+            <a href="">
+              <img
+                src="https://api.time.com/wp-content/uploads/2022/04/childcare-letter-biden.jpg?quality=85&w=700&h=1050&crop=1"
+                alt="">
+            </a>
+            <div class="text">
+              <a href="">
+                <h5>Politics</h5>
+                <h3>Democrats Push Biden to Fix Childcare Crisis</h3>
+                <p>Abby Vesoulis</p>
+              </a>
+            </div>
+          </div>
+          <div class="col">
+            <a href="">
+              <img
+                src="https://api.time.com/wp-content/uploads/2022/04/title-42-ending-01.jpg?quality=85&w=700&h=1050&crop=1"
+                alt="">
+            </a>
+            <div class="text">
+              <a href="">
+                <h5>Immigration</h5>
+                <h3>At-Risk Migrants Seek Exemptions to Titles 42</h3>
+                <p>Jasmine Aguilera</p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="most-watched">
+      <div class="width-container">
+        <div class="row-1">
+          <div class="col">
+            <h2>Most watched</h2>
+          </div>
+        </div>
+        <div class="row-2">
+          <div class="col">
+            <span class="no">1</span>
+            <a href="https://time.com/6167664/elon-musk-twitter-wall-street-reactions/"><i class="fa fa-solid fa-play"></i>Here’s What Wall Street Thinks About Elon Musk’s Bid to Buy Twitter</a>
+          </div>
+          <div class="col">
+            <span class="no">2</span>
+            <a href="https://time.com/6168623/coinbases-new-nft-marketplace-may-solve-problems/"><i class="fa fa-solid fa-play"></i>Coinbase's New NFT Marketplace May Solve Its Growth Problems</a>
+          </div>
+          <div class="col">
+            <span class="no">3</span>
+            <a href="https://www.bbc.com/news/business-61145127"><i class="fa fa-solid fa-play"></i>Apple staff make bid for first union at a US store</a>
+          </div>
+          <div class="col">
+            <span class="no">4</span>
+            <a href="https://www.bbc.com/news/world-asia-61036733"><i class="fa fa-solid fa-play"></i>North Korean hackers target gamers in $615m crypto heist - US</a>
+          </div>
+          <div class="col">
+            <span class="no">5</span>
+            <a href="https://www.bbc.com/news/world-us-canada-61123200"><i class="fa fa-solid fa-play"></i>Twitter board takes action to fight Musk bid</a>
+          </div>
+        </div>
+        <div class="row-3">
+          <div class="col">
+            <h2>Full Story</h2>
+          </div>
+          <div class="col">
+            <a href="">See all</a>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+    <section class="feature">
+      <div class="width-container">
+        <div class="row-1">
+          <div class="col-1">
+            <div class="text">
+              <a href="">
+                <h3>Tesla profits soar as customers pay more</h3>
+                <span>APRIL 20, 2022 • 12:06 PM EDT</span>
+                <p>Elon Musk's Tesla has raised prices for its electric cars as it faces higher costs</p>
+              </a>
+            </div>
+          </div>
+          <div class="col-2">
+            <a href=""><img
+                src="https://c.ndtvimg.com/2022-04/feg10lkk_elon-musk-twitter-reuters-photo_625x300_16_April_22.jpg?im=Resize=(1230,900)"
+                alt=""></a>
+          </div>
+          <div class="col-3">
+            <h2>Most Read</h2>
+            <ul>
+              <li>
+                <span>1</span>
+                <div class="text">
+                  <a class="about" href="https://time.com/lightbox">LightBox</a>
+                  <a href="/4272666/refugees-stories-whatsapp/">
+                    <h3>The Messages That Hold Refugee Families Together</h3>
+                  </a>
+                </div>
+              </li>
+              <li>
+                <span>2</span>
+                <div class="text">
+                  <a class="about" href="https://time.com/ideas">Ideas</a>
+                  <a href="/6165506/military-strategy-ukraine-war/">
+                    <h3>What the U.S. Military Needs to Learn from the Ukraine War</h3>
+                  </a>
+                </div>
+              </li>
+              <li>
+                <span>3</span>
+                <div class="text">
+                  <a class="about" href="https://time.com/world">World</a>
+                  <a href="/6166054/sri-lanka-funds-default/">
+                    <h3>Sri Lanka Leaders Defiant at Home While Scrambling for Funds</h3>
+                  </a>
+                </div>
+              </li>
+              <li>
+                <span>4</span>
+                <div class="text">
+                  <a class="about" href="https://time.com/world">World</a>
+                  <a href="/6166032/shanghai-covid-child-separation/">
+                    <h3>'My Daughter Was Alone in the Hospital for 5 Days.' Chinese Parents Protest Child Separation for
+                      COVID-19</h3>
+                  </a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="row-2">
+          <div class="col">
+            <a href="">
+              <img
+                src="https://api.time.com/wp-content/uploads/2022/04/Shanghai-lockdown.jpg?quality=85&w=925&h=617&crop=1&resize=925,617"
+                alt="">
+              <h3>Chinese Parents Protest Child Separation for COVID-19</h3>
+            </a>
+            <span class="time">APRIL 12, 2022 • 2:31 AM EDT</span>
+          </div>
+          <div class="col">
+            <a href="">
+              <img
+                src="https://api.time.com/wp-content/uploads/2022/04/shohei-ohtani-baseball-pitcher.jpg?quality=85&crop=0px%2C295px%2C1601px%2C1069px&resize=925,617&strip"
+                alt="">
+              <h3>Shohei Ohtani Is What Baseball Needs</h3>
+            </a>
+            <span class="time">APRIL 12, 2022 • 2:31 AM EDT</span>
+          </div>
+          <div class="col">
+            <a href="">
+              <img
+                src="https://api.time.com/wp-content/uploads/2022/04/AP22101192217431.jpg?quality=85&w=925&h=617&crop=1&resize=925,617"
+                alt="">
+              <h3>Elon Musk Accused of Breaking Law While Buying Twitter Stock</h3>
+            </a>
+            <span class="time">APRIL 12, 2022 • 2:31 AM EDT</span>
+          </div>
+          <div class="col">
+            <a href="">
+              <img
+                src="https://api.time.com/wp-content/uploads/2022/03/covid-samples.jpg?quality=85&w=925&h=617&crop=1&resize=925,617"
+                alt="">
+              <h3>What Causes Long COVID? Researchers Are Learning More</h3>
+            </a>
+            <span class="time">APRIL 12, 2022 • 2:31 AM EDT</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="video">
+      <div class="video-inner">
+        <div class="row-1">
+          <a href="">
+            <h1>video
+              <i class="fa-light fa-greater-than"></i>
+            </h1>
+          </a>
+        </div>
+        <div class="row-2">
+          <div class="col-1">
+            <iframe class="youtube" src="https://www.youtube.com/embed/LYizylQouhI" title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+            <div class="video-title">
+              <h1>Shohei Ohtani Is What Baseball Needs</h1>
+              <p>Shohei Ohtani is a baseball savant doing what has never been seen in Major League Baseball history. The
+                Los Angeles Angels all-star pitcher from Japan hit 46 home runs and recorded 156 strikeouts in 2021, and
+                was named the American League MVP...</p>
+            </div>
+          </div>
+          <div class="col-2">
+            <h2>watch next</h2>
+            <ul>
+              <li>
+                <a href="">
+                  <figure>
+                    <img src="https://cdn.jwplayer.com/v2/media/5AuGIDYV/poster.jpg?width=720" alt="">
+                    <i class="fa fa-solid fa-play"></i>
+                  </figure>
+                  <h3>Shohei Ohtani Is What Baseball Needs</h3>
+                </a>
+                <!-- <span>Apr 7, 2022|4:30</span> -->
+              </li>
+              <li>
+                <a href="">
+                  <figure>
+                    <img src="https://cdn.jwplayer.com/v2/media/PDzDfzfd/poster.jpg?width=720" alt="">
+                    <i class="fa fa-solid fa-play"></i>
+                  </figure>
+                  <h3>Inside the Estonian Defense League</h3>
+                </a>
+                <!-- <span>Apr 7, 2022|4:30</span> -->
+              </li>
+              <li>
+                <a href="">
+                  <figure>
+                    <img src="https://cdn.jwplayer.com/v2/media/EsudyQU5/poster.jpg?width=720" alt="">
+                    <i class="fa fa-solid fa-play"></i>
+                  </figure>
+                  <h3>TIME100 Most Influential Companies of 2022: HYBE</h3>
+                </a>
+                <!-- <span>Apr 7, 2022|4:30</span> -->
+              </li>
+              <li>
+                <a href="">
+                  <figure>
+                    <img src="https://cdn.jwplayer.com/v2/media/INjESA6i/poster.jpg?width=720" alt="">
+                    <i class="fa fa-solid fa-play"></i>
+                  </figure>
+                  <h3>The Founders of La Create Sp_ce Are Rethinking the Future...</h3>
+                </a>
+                <!-- <span>Apr 7, 2022|4:30</span> -->
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="row-1">
+        <div class="logo">
+          <img src="images/logo.png" alt="">
+        </div>
+        <div class="social">
+          <a href="">
+            <i class="fa fa-facebook-square"></i>
+          </a>
+          <a href="">
+            <i class="fa fa-instagram"></i>
+          </a>
+          <a href="">
+            <i class="	fa fa-pinterest-p"></i>
+          </a>
+        </div>
+      </div>
+      <div class="width-container">
+        <div class="row-2">
+          <ul>
+            <li>Home</li>
+            <li>U.S</li>
+            <li>Politics</li>
+            <li>World</li>
+            <li>Health</li>
+            <li>Personal Finance by NextAdvisor</li>
+            <li>Future of Work by Charter</li>
+            <li>Business</li>
+            <li>Tech</li>
+          </ul>
+          <ul>
+            <li>Entertainment</li>
+            <li>Ideas</li>
+            <li>Science</li>
+            <li>History</li>
+            <li>Newsfeed</li>
+            <li>Sports</li>
+            <li>Magazine</li>
+            <li>The TIME Vault</li>
+            <li>TIME For Kids</li>
+          </ul>
+          <ul>
+            <li>TIME Edge</li>
+            <li>Video</li>
+            <li>Masthead</li>
+            <li>Newsletters</li>
+            <li>Subscribe</li>
+            <li>Subscriber Benefits</li>
+            <li>Give a Gift</li>
+            <li>Shop the TIME Store</li>
+            <li>Careers</li>
+          </ul>
+          <ul>
+            <li>Press Room</li>
+            <li>U.s & Canada Customer Care</li>
+            <li>Global Help Center</li>
+            <li>Contact the Editors</li>
+            <li>Reprints and Permissions</li>
+            <li>Site Map</li>
+          </ul>
+        </div>
+      </div>
+      <div class="row-3">
+        <p>© 2022 TIME USA, LLC. All Rights Reserved. Use of this site constitutes acceptance of our Terms of Service,
+          Privacy Policy (Your California Privacy Rights) and Do Not Sell My Personal Information.
+          TIME may receive compensation for some links to products and services on this website. Offers may be subject
+          to change without notice.</p>
+      </div>
+    </footer>
+</body>
+</html>

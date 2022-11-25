@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Login/Signin</title>
+    <link rel="stylesheet" href="css/signin.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <!-- <img class="background-image" src="https://ichef.bbci.co.uk/images/ic/704xn/p0by9l73.png" alt=""> -->
+    <div class="wrapper">
+      <div class="title-text">
+        <div class="title login">
+          <img src="images/logo.png" alt="" />
+        </div>
+        <div class="title signup">
+          <img src="images/logo.png" alt="" />
+        </div>
+      </div>
+      <div class="form-container">
+        <div class="slide-controls">
+          <input type="radio" name="slide" id="login" checked />
+          <input type="radio" name="slide" id="signup" />
+          <label for="login" class="slide login">Login</label>
+          <label for="signup" class="slide signup">Signup</label>
+          <div class="slider-tab"></div>
+        </div>
+        <div class="form-inner">
+          <form action="#" class="login">
+            <div class="field">
+              <input
+                type="text"
+                id="login-email"
+                placeholder="Email Address"
+                required
+              />
+            </div>
+            <div class="field">
+              <input
+                type="password"
+                id="login-password"
+                placeholder="Password"
+                required
+              />
+            </div>
+            <div class="pass-link">
+              <a href="#">Forgot password?</a>
+            </div>
+            <div class="field btn">
+              <div class="btn-layer"></div>
+              <button id="logIn" type="button">Login</button>
+            </div>
+            <div class="signup-link">
+              Not a member? <a href="">Signup now</a>
+            </div>
+          </form>
+          <form action="#" class="signup">
+            <div class="field">
+              <input
+                type="text"
+                id="signup-email"
+                placeholder="Email Address"
+                required
+              />
+            </div>
+            <div class="field">
+              <input
+                type="password"
+                id="signup-password"
+                placeholder="Password"
+                required
+              />
+            </div>
+            <div class="field">
+              <input type="password" placeholder="Confirm password" required />
+            </div>
+            <div class="field btn">
+              <div class="btn-layer"></div>
+              <button id="signUp" type="button">SignUp</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script>
+      const loginText = document.querySelector(".title-text .login");
+      const loginForm = document.querySelector("form.login");
+      const loginBtn = document.querySelector("label.login");
+      const signupBtn = document.querySelector("label.signup");
+      const signupLink = document.querySelector("form .signup-link a");
+      signupBtn.onclick = () => {
+        loginForm.style.marginLeft = "-50%";
+        loginText.style.marginLeft = "-50%";
+      };
+      loginBtn.onclick = () => {
+        loginForm.style.marginLeft = "0%";
+        loginText.style.marginLeft = "0%";
+      };
+      signupLink.onclick = () => {
+        signupBtn.click();
+        return false;
+      };
+    </script>
+  </body>
+</html>
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-app.js";
+  import {
+    getAuth,
+    createUserWithEmailAndPassword,
+    signInWithEmailAndPassword,
+    onAuthStateChanged,
+    //  signOut
+  } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-auth.js";
+  import {
+    getDatabase,
+    set,
+    ref,
+    update,
+  } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-database.js";
+
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyBTrDdHi1wvg852uFppVK6_3x7S2ld8GM8",
+    authDomain: "interceptor-login.firebaseapp.com",
+    databaseURL: "https://interceptor-login-default-rtdb.firebaseio.com",
+    projectId: "interceptor-login",
+    storageBucket: "interceptor-login.appspot.com",
+    messagingSenderId: "609177432619",
+    appId: "1:609177432619:web:1abc84c7bea138d549f06e",
+    measurementId: "G-W5Z99876XS",
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const database = getDatabase(app);
+  const auth = getAuth();
+
+  signUp.addEventListener("click", (e) => {
+    var signUpEmail = document.getElementById("signup-email").value;
+    var signUpPassword = document.getElementById("signup-password").value;
+
+    //sign up user
+    createUserWithEmailAndPassword(auth, signUpEmail, signUpPassword)
+      .then((userCredential) => {
+        // Signed in
+        const user = userCredential.user;
+        // ... user.uid
+        set(ref(database, "users/" + user.uid), {
+          signUpEmail: signUpEmail,
+          signUpPassword: signUpPassword,
+        })
+          .then(() => {
+            // Data saved successfully!
+            alert("user created successfully");
+          })
+          .catch((error) => {
+            // The write failed...
+            alert(error);
+          });
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        // ..
+        alert(errorMessage);
+      });
+  });
+  logIn.addEventListener("click", (e) => {
+    var loginEmail = document.getElementById("login-email").value;
+    var loginPassword = document.getElementById("login-password").value;
+
+    signInWithEmailAndPassword(auth, loginEmail, loginPassword)
+      .then((userCredential) => {
+        // Signed in
+        const user = userCredential.user;
+        // ...
+        // console.log(user)
+        // save log in details into real time database
+        var lgDate = new Date();
+        update(ref(database, "users/" + user.uid), {
+          last_login: lgDate,
+        })
+          .then(() => {
+            // Data saved successfully!
+            alert("user logged in successfully");
+            window.location.href = "home.html";
+          })
+          .catch((error) => {
+            // The write failed...
+            alert(error);
+          });
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        alert(errorMessage);
+      });
+  });
+  //   onAuthStateChanged(auth, (user) => {});
+
+  //  signOut(auth).then(() => {
+  //         // Sign-out successful.
+  //  }).catch((error) => {
+  //      // An error happened.
+  //  });
+</script>

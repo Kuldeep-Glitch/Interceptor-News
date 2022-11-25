@@ -1,0 +1,45 @@
+footer .row-1{
+    padding: 80px 0 20px 0;
+    border-bottom: 1px solid #686c73;
+}
+footer .row-1 .logo{
+    text-align: center;
+}
+footer .row-1 .logo img{
+    width: 200px;
+}
+footer .row-1 .social{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 25px;
+}
+footer .row-1 .social a{
+    text-decoration: none;
+    color: black;
+    margin: 5px;
+}
+footer .row-2{
+    width: 100%;
+    display: flex;
+}
+footer .row-2 ul{
+    width: 25%;
+    list-style: none;
+}
+footer .row-2 ul li{
+    color: #686c73;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .76rem;
+    cursor: pointer;
+    line-height: 35px;
+}
+footer .row-3{
+    padding: 0 150px 0 150px;
+    text-align: center;
+    border-top: 1px solid #686c73;
+}
+footer .row-3 p{
+    color: #686c73;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+}

@@ -1,0 +1,120 @@
+.video{
+    width: 100%;
+    background-image: radial-gradient(circle at 96% 96%,#1a0a23,#0d1727 43%,#121212 73%);
+    height: 51rem;
+}
+.video .video-inner{
+    max-width: 1248px;
+    width: 100%;
+    margin: 0 auto;
+}
+.video .row-1{
+    padding-top: 30px;
+}
+.video .row-1 a{
+    display: block;
+    margin: 30px 0 30px 0;
+    text-decoration: none;
+}
+.video .row-1 a h1{
+    font-size: 35px;
+    color: white;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-family: Oswald, sans-serif;
+}
+.video .row-1 a h1 .fa-light{
+    margin: 0;
+    padding: 0;
+    fill: #ebebeb;
+    font-size: 40px;
+}
+.video .row-2{
+    display: flex;
+    width: 100%
+}
+.video .row-2 .col-1{
+    width: 65%;
+}
+.video .row-2 .col-2{
+    width: 35%;
+}
+.video .row-2 .col-1 .video-title{
+    width: 100%;
+    display: flex;
+}
+.video .row-2 .col-1 .video-title h1,
+.video .row-2 .col-1 .video-title p{
+    font-family: Zilla Slab, sans-serif;
+    color: white;
+    /* padding: 20px; */
+    width: 50%;
+}
+.video .row-2 .col-1 .video-title h1{
+    padding-right: 20px ;
+}
+.video .row-2 .col-1 .video-title p{
+    line-height: 25px;
+    padding:0 20px 0 0;
+}
+.video .row-2 .col-1 .youtube{
+    width: 50rem;
+    height: 30rem;
+}
+.video .row-2 .col-2 h2{
+    margin: 0 0 20px 0;
+    padding-left: 50px;
+    color: white;
+    text-align: left;
+    text-transform: uppercase;
+    font-family: oswald, sans-serif;
+}
+.video .row-2 .col-2 ul{
+    padding-left: 50px;
+}
+.video .row-2 .col-2 ul li{
+    list-style: none;
+    padding-bottom: 40px;
+}
+.video .row-2 .col-2 ul li a{
+    text-decoration: none;
+    display: flex;
+}
+.video .row-2 .col-2 ul li a figure{
+    position: relative;
+    margin: 0;
+}
+.video .row-2 .col-2 ul li a figure .fa{
+    font-size: 30px;
+    color: white;
+    text-align: center;
+    position: absolute;
+    right: 45%;
+    top: 35%;
+    transition: .3s;
+
+}
+.video .row-2 .col-2 ul li a figure:hover .fa{
+    color: red;
+}
+.video .row-2 .col-2 ul li a figure img{
+    -webkit-filter: grayscale(0) blur(0);
+	filter: grayscale(0) blur(0);
+	-webkit-transition: .2s ease-in-out;
+	transition: .3s ease-in-out;
+    width: 180px;
+    
+}
+.video .row-2 .col-2 ul li a figure:hover img{
+    -webkit-filter: grayscale(100%) blur(3px);
+	filter: grayscale(100%) blur(3px);
+
+    
+}
+.video .row-2 .col-2 ul li a h3{
+    color: white;
+    margin: 0 0 0 10px;
+    font-family: Zilla Slab, sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+}
